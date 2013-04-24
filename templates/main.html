@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="ITP DWD Example Site using templates">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+        <!-- PAGES -->
+
+        <!-- Get Font from Google http://www.google.com/webfonts -->
+        <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Peralta' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,100' rel='stylesheet' type='text/css'>        
+    </head>
+
+    <body onload="scrollWindow()">
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        
+        
+        <div class="container">
+        			
+<!-- INTRO face -->
+			<div id="enlargeBacteria"></div>
+			<img src="/static/img/landingPage/lineFace.png" id="main-line-face" style="position:fixed; width:405px; margin-left:260px; margin-top:120px; z-index:-3;">
+			<img src="/static/img/landingPage/dotFace.png" id="main-dot-face" style="position:fixed; width:405px; margin-top:120px; z-index:-3;">	
+			<div id="transition-bg"></div>
+
+
+<!-- TABS -->
+			<!-- <a href="/amount" id="amountPage" style="display:block;">we are only ten percent human</a> -->
+			
+			
+			
+			<a href="/amount" id="amountPage"><div class="c-white s3" style="margin:120px 10px 10px 86px;">we are only<br/> ten percent<br/> human</div></a>
+			<a href="/size" id="sizePage"><div class="c-white s3" style="margin:120px 10px 10px 46px;">human cells are ten times bigger then human cells</div></a>
+			<a href="/diversity" id="diversityPage"><div class="c-white s3" style="margin:120px 10px 10px 44px;">concentrated on different parts of the body</div></a>
+			<a href="/loc" id="locPage"><div class="c-white s3" style="margin:120px 10px 10px 52px;">culture differs by location</div></a>	
+			
+			
+			
+			<!--<div class="center">
+				<img src="/static/img/landingPage/main-paper-bg.png"  id="main-paper-bg">
+			</div>
+			<p id="TenPercentHuman" class="s4 fontCodystar" style="position:fixed; margin-top:560px; margin-left:266px; color:#39B5AC;">Ten Percent Human</p>
+        
+        
+			<!-- human cell black -->
+<!-- 			<img src="/static/img/cellSize.png" id="cellSize" style="position:fixed; width:405px; margin-top:120px; z-index:-2;"> -->
+			<!-- bacteria size -->
+<!--
+			<img src="/static/img/bacteriaSize.png" id="bacteriaSize" style="position:fixed; width:114px; margin-left:317px; margin-top:360px; z-index:-1;">	
+			<p id="sizeP" class="s2" style="position:fixed; margin-top:580px; margin-left:130px; color:#000000;">The size of a typical bacterial cell is 0.5-5.0 micrometers, an average human cell is 10 micrometers.</p>
+			<p id="cellSizeP" class="s2" style="position:fixed; margin-top:130px; margin-left:690px; color:#000000;">Human Cell</p>
+			<p id="bacteriaSizeP" class="s2" style="position:fixed; margin-top:473px; margin-left:145px; color:#000000;">Bacteria</p>
+-->
+
+			
+			
+<!-- DATA VIZ -->
+			<!--
+			<img src="/static/img/human-paper-bg.png" id="human-paper-bg">	
+			<div id="human-paper-data-wrapper" style="background-color:red; width:940px; height:600px; z-index:-1;"></div>
+			-->
+        </div> <!-- end container -->
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<!--         <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.8.1.min.js') }}"><\/script>')</script> -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery-1.8.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jarallax-0.2.3b.js') }}"></script>
+        <script type="text/javascript">
+	        function scrollWindow(){
+				window.scrollTo(0,500);
+			}
+        </script>
+        
+        {% block scripts %}{% endblock %}
+
+    </body>
+</html>
